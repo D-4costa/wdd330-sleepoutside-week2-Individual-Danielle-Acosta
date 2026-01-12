@@ -1,0 +1,23 @@
+[
+  {
+    "Id": "t1",
+    "Name": "Trailblazer 2",
+    "Brand": "Sleep Outside",
+    "Price": 179.99,
+    "Image": "images/tent1.jpg"
+  },
+  {
+    "Id": "t2",
+    "Name": "Alpine Ridge 3",
+    "Brand": "Sleep Outside",
+    "Price": 249.99,
+    "Image": "images/tent2.jpg"
+  },
+  {
+    "Id": "t3",
+    "Name": "Summit Pro 4",
+    "Brand": "Sleep Outside",
+    "Price": 319.99,
+    "Image": "images/tent3.jpg"
+  }
+]
