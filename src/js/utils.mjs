@@ -1,19 +1,18 @@
-// wrapper for querySelector...returns matching element
+// wrapper for querySelector
 export function qs(selector, parent = document) {
   return parent.querySelector(selector);
 }
 
-// retrieve data from localstorage
+// localStorage helpers
 export function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
 
-// save data to local storage
 export function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
-// set a listener for both touchend and click
+// click + touch helper
 export function setClick(selector, callback) {
   qs(selector).addEventListener("touchend", (event) => {
     event.preventDefault();
@@ -22,11 +21,10 @@ export function setClick(selector, callback) {
   qs(selector).addEventListener("click", callback);
 }
 
-// get the product id from the query string
+// get query string param
 export function getParam(param) {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  return urlParams.get(param);
+  const params = new URLSearchParams(window.location.search);
+  return params.get(param);
 }
 
 export function renderListWithTemplate(
@@ -43,4 +41,5 @@ export function renderListWithTemplate(
   const htmlStrings = list.map(templateFn).join("");
   parentElement.insertAdjacentHTML(position, htmlStrings);
 }
+
 
